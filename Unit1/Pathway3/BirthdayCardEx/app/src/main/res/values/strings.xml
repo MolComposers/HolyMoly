@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BirthdayCardEx</string>
+    <string name="happy_birthday_text">Android</string>
 </resources>
