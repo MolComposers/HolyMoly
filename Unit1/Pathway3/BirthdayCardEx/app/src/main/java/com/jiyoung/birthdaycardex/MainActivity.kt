@@ -15,11 +15,12 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -46,23 +47,22 @@ class MainActivity : ComponentActivity() {
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
         // 가운데 정렬
-        verticalArrangement = Arrangement.Top,
+        verticalArrangement = Arrangement.Center,
         modifier = modifier,
     ) {
         Text(
             text = message,
-            fontSize = 36.sp,
-            // 텍스트 배경 추가
-            modifier = Modifier
-                .padding(16.dp)
-                .background(Color.Blue),
+            fontSize = 100.sp,
+            lineHeight = 116.sp,
+            textAlign = TextAlign.Center
+//            textAlign = TextAlign.Center,
         )
         Text(
             text = from,
             fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.End),
+                .align(alignment = Alignment.CenterHorizontally),
         )
     }
 }
@@ -93,6 +93,6 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
 @Composable
 fun DefaultPreview() {
     BirthdayCardExTheme {
-        GreetingImage("Happy Birthday", "jenny")
+        GreetingImage(stringResource(R.string.happy_birthday_text), "From jenny")
     }
 }
