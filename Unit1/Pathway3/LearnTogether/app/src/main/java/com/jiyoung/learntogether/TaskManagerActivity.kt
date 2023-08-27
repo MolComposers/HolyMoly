@@ -12,17 +12,17 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jiyoung.learntogether.ui.theme.LearnTogetherTheme
 
-class MainActivity : ComponentActivity() {
+class TaskManagerActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -32,10 +32,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background,
                 ) {
-                    WritingText(
-                        stringResource(R.string.article_title),
-                        stringResource(R.string.article_first),
-                        stringResource(R.string.article_second),
+                    DoneTask(
+                        stringResource(R.string.task_done_title),
+                        stringResource(R.string.task_done_content),
                     )
                 }
             }
@@ -44,46 +43,26 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun WritingText(
-    title: String,
-    first: String,
-    second: String,
-    modifier: Modifier = Modifier,
-) {
-    val image = painterResource(id = R.drawable.bg_article)
+fun DoneTask(title: String, content: String, modifier: Modifier = Modifier) {
+    val image = painterResource(id = R.drawable.ic_task_completed__1_)
     Column(
-        verticalArrangement = Arrangement.Top,
         modifier = Modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
     ) {
-        Image(painter = image, contentDescription = null, contentScale = ContentScale.FillWidth)
-        Text(
-            text = title,
-            fontSize = 24.sp,
-            modifier = Modifier.padding(16.dp),
-        )
-        Text(
-            text = first,
-            fontSize = 16.sp,
-            modifier = Modifier.padding(horizontal = 16.dp),
-            textAlign = TextAlign.Justify,
-        )
-        Text(
-            text = second,
-            fontSize = 16.sp,
-            modifier = Modifier.padding(16.dp),
-            textAlign = TextAlign.Justify,
-        )
+        Image(painter = image, contentDescription = null)
+        Text(text = title, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 24.dp, bottom = 8.dp))
+        Text(text = content, fontSize = 16.sp)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreview2() {
     LearnTogetherTheme {
-        WritingText(
-            stringResource(R.string.article_title),
-            stringResource(R.string.article_first),
-            stringResource(R.string.article_second),
+        DoneTask(
+            stringResource(R.string.task_done_title),
+            stringResource(R.string.task_done_content),
         )
     }
 }
