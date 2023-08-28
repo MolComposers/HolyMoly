@@ -18,4 +18,8 @@
     <string name="quadrant_fourth_content">A layout composable that places its children in a vertical sequence.</string>
     <string name="title_activity_profile">ProfileActivity</string>
 
+    <string name="title_activity_dice_roller">DiceRollerActivity</string>
+    <string name="roll">Roll</string>
+
+
 </resources>
