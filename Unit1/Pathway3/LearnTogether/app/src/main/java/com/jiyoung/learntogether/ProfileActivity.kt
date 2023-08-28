@@ -73,6 +73,7 @@ fun ProfileCard(name: String, title: String, modifier: Modifier = Modifier) {
     }
 }
 
+// TODO Info card 자체에 width를 wrap content처럼 감싸고 싶은데 따로 방법이 있을까?
 @Composable
 fun InfoCard(modifier: Modifier = Modifier) {
     val space = 10.dp
