@@ -20,13 +20,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jiyoung.learntogether.ui.theme.LearnTogetherTheme
+import com.jiyoung.learntogether.ui.theme.WoofTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LearnTogetherTheme {
+            WoofTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -79,7 +79,7 @@ fun WritingText(
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    LearnTogetherTheme {
+    WoofTheme() {
         WritingText(
             stringResource(R.string.article_title),
             stringResource(R.string.article_first),
