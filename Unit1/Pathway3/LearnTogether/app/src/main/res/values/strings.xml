@@ -21,5 +21,18 @@
     <string name="title_activity_dice_roller">DiceRollerActivity</string>
     <string name="roll">Roll</string>
 
+    <string name="title_activity_lemonade">LemonadeActivity</string>
+    <string name="lemonade_1">Tap the lemon tree to select a lemon</string>
+    <string name="lemonade_2">Keep tapping the lemon to squeeze it</string>
+    <string name="lemonade_3">Tap the lemonade to drink it</string>
+    <string name="lemonade_4">Tap the empty glass to start again</string>
+    <string name="lemonade_desc1">Lemon tree</string>
+    <string name="lemonade_desc2">Lemon</string>
+    <string name="lemonade_desc3">Glass of lemonade</string>
+    <string name="lemonade_desc4">Empty glass</string>
+
+
+
+
 
 </resources>
