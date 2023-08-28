@@ -37,7 +37,22 @@
     <string name="tip_amount">Tip Amount: %s</string>
     <string name="how_was_the_service">Tip Percentage</string>
     <string name="round_up_tip">Round up tip?</string>
+
     <string name="title_activity_art_space">ArtSpaceActivity</string>
+
+    <string name="title_activity_affirmation">AffirmationActivity</string>
+    <string name="affirmation1">A</string>
+    <string name="affirmation2">B</string>
+    <string name="affirmation3">C</string>
+    <string name="affirmation4">D</string>
+    <string name="affirmation5">E</string>
+    <string name="affirmation6">F</string>
+    <string name="affirmation7">G</string>
+    <string name="affirmation8">H</string>
+    <string name="affirmation9">I</string>
+    <string name="affirmation10">J</string>
+
+
 
 
 </resources>
